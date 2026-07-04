@@ -3,209 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ксения — эксперт по недвижимости и ипотеке · Краснодар</title>
+<title>Ксения Говорова — недвижимость и ипотека в Краснодаре</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FBF6F0;
-    --bg2:#F3EAE0;
-    --panel:#FFFDFA;
-    --ink:#211B17;
-    --muted:#7A6E64;
-    --soft:#4A4038;
-    --accent:#B8472E;
-    --accent-2:#CB5638;
-    --olive:#6E7A4F;
-    --line:#EADFD2;
-    --radius:16px;
-    --maxw:1180px;
+    --primary:#0F766E;      /* trust teal */
+    --primary-2:#115E58;
+    --secondary:#14B8A6;
+    --accent:#0369A1;       /* professional blue */
+    --bg:#F0FDFA;
+    --paper:#FFFFFF;
+    --fg:#134E4A;
+    --muted-fg:#5B7B76;
+    --muted:#E8F0F3;
+    --border:#CDE9E4;
+    --ring:#0F766E;
+    --radius:18px;
+    --maxw:1200px;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{ background:var(--bg); color:var(--ink);
-    font-family:"Inter",-apple-system,Segoe UI,Roboto,sans-serif;
-    -webkit-font-smoothing:antialiased; font-feature-settings:"ss01","cv01"; overflow-x:hidden; }
-  h1,h2,h3,.display{ font-family:"Fraunces",Georgia,serif; font-weight:500; letter-spacing:-0.015em; }
+  body{ background:var(--bg); color:var(--fg);
+    font-family:"Josefin Sans",-apple-system,Segoe UI,Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,.display{ font-family:"Cinzel",Georgia,serif; font-weight:600; letter-spacing:-0.01em; }
   a{color:inherit;text-decoration:none;}
   .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
-  .eyeline{ font-size:11px; letter-spacing:0.26em; text-transform:uppercase; color:var(--accent); font-weight:600; }
-  .muted{color:var(--muted);}
+  .eyeline{ font-size:12px; letter-spacing:0.34em; text-transform:uppercase; color:var(--primary); font-weight:600; }
+  .muted{color:var(--muted-fg);}
   .tab{ font-variant-numeric:tabular-nums; }
+  svg{ display:block; }
 
-  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
   .reveal.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .reveal{opacity:1 !important; transform:none !important;} html{scroll-behavior:auto;} }
 
   /* NAV */
-  nav{ position:fixed; top:0; left:0; right:0; z-index:50; padding:18px 0;
-    background:rgba(251,246,240,0); transition:background .4s, border-color .4s, padding .4s; border-bottom:1px solid transparent; }
-  nav.scrolled{ background:rgba(251,246,240,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding:12px 0; }
+  nav{ position:fixed; top:0; left:0; right:0; z-index:50; padding:20px 0;
+    background:rgba(240,253,250,0); transition:background .4s, border-color .4s, padding .4s; border-bottom:1px solid transparent; }
+  nav.scrolled{ background:rgba(240,253,250,.86); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:13px 0; }
   .nav-inner{ display:flex; align-items:center; justify-content:space-between; }
-  .logo{ font-family:"Fraunces",serif; font-size:19px; font-weight:600; display:flex; align-items:baseline; gap:8px; }
-  .logo .m{ color:var(--accent); } .logo .s{ font-size:11px; color:var(--muted); font-family:"Inter"; letter-spacing:.16em; text-transform:uppercase; }
-  .nav-links{ display:flex; gap:28px; align-items:center; }
-  .nav-links a{ font-size:14px; color:var(--soft); transition:color .25s; }
-  .nav-links a:hover{ color:var(--ink); }
-  .btn{ display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:600;
-    padding:11px 20px; border-radius:100px; background:var(--accent); color:#fff;
-    transition:transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s, background .25s; box-shadow:0 8px 26px -12px var(--accent); }
-  .btn:hover{ transform:translateY(-2px); background:var(--accent-2); box-shadow:0 14px 34px -12px var(--accent); }
-  .btn.ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none; }
-  .btn.ghost:hover{ border-color:var(--accent); background:rgba(184,71,46,.05); }
-  @media(max-width:820px){ .nav-links a:not(.btn){display:none;} }
+  .logo{ font-family:"Cinzel",serif; font-size:18px; font-weight:700; letter-spacing:.02em; display:flex; align-items:baseline; gap:9px; }
+  .logo .s{ font-size:10px; color:var(--muted-fg); font-family:"Josefin Sans"; letter-spacing:.2em; text-transform:uppercase; font-weight:500; }
+  .nav-links{ display:flex; gap:30px; align-items:center; }
+  .nav-links a{ font-size:14.5px; color:var(--fg); font-weight:500; transition:color .25s; }
+  .nav-links a:hover{ color:var(--primary); }
+  .btn{ display:inline-flex; align-items:center; gap:9px; font-size:14.5px; font-weight:600; cursor:pointer;
+    padding:12px 22px; border-radius:100px; background:var(--primary); color:#fff; border:0;
+    transition:transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s, background .25s; box-shadow:0 10px 28px -12px var(--primary); }
+  .btn:hover{ transform:translateY(-2px); background:var(--primary-2); box-shadow:0 16px 38px -12px var(--primary); }
+  .btn.ghost{ background:transparent; color:var(--fg); border:1px solid var(--border); box-shadow:none; }
+  .btn.ghost:hover{ border-color:var(--primary); background:rgba(15,118,110,.05); }
+  .btn.blue{ background:var(--accent); box-shadow:0 10px 28px -12px var(--accent); }
+  .btn.blue:hover{ background:#025587; }
+  @media(max-width:840px){ .nav-links a:not(.btn){display:none;} }
 
-  /* HERO — split with mortgage calculator */
-  header{ position:relative; padding:150px 0 80px; overflow:hidden; }
-  .hero-glow{ position:absolute; inset:0; z-index:0;
-    background:radial-gradient(680px 420px at 12% 8%, rgba(184,71,46,.10), transparent 60%),
-               radial-gradient(600px 460px at 92% 90%, rgba(110,122,79,.08), transparent 58%); }
-  .hero-inner{ position:relative; z-index:2; display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; }
-  @media(max-width:940px){ .hero-inner{ grid-template-columns:1fr; gap:40px; } }
-  h1.hero{ font-size:clamp(38px,6vw,68px); line-height:1.0; font-weight:600; letter-spacing:-0.025em; }
-  h1.hero em{ font-style:italic; color:var(--accent); font-weight:500; }
-  .hero-sub{ margin-top:24px; font-size:clamp(16px,2.1vw,18.5px); line-height:1.62; color:var(--soft); max-width:44ch; }
-  .hero-tags{ margin-top:28px; display:flex; gap:10px; flex-wrap:wrap; }
-  .hero-tags .t{ font-size:13px; color:var(--soft); background:var(--panel); border:1px solid var(--line); padding:8px 14px; border-radius:100px; }
-  .hero-tags .t b{ color:var(--accent); }
-
-  /* mortgage calc card in hero */
-  .calc-card{ background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:30px 30px 28px;
-    box-shadow:0 40px 80px -40px rgba(80,50,30,.4); position:relative; }
-  .calc-card .badge{ position:absolute; top:-13px; left:26px; background:var(--accent); color:#fff; font-size:11.5px; font-weight:600;
-    letter-spacing:.04em; padding:6px 14px; border-radius:100px; box-shadow:0 10px 24px -10px var(--accent); }
-  .calc-card h3{ font-size:20px; font-weight:600; margin-bottom:6px; }
-  .calc-card .cc-hint{ font-size:12.5px; color:var(--muted); margin-bottom:20px; }
-  .cc-progs{ display:flex; gap:7px; margin-bottom:20px; flex-wrap:wrap; }
-  .cc-progs button{ padding:8px 13px; border-radius:100px; border:1px solid var(--line); background:transparent; color:var(--soft);
-    font-family:inherit; font-size:12.5px; cursor:pointer; transition:all .2s; }
-  .cc-progs button:hover{ border-color:var(--accent); }
-  .cc-progs button.on{ background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; }
-  .cc-progs button .r{ opacity:.7; font-size:11px; }
-  .cc-row{ margin-bottom:16px; }
-  .cc-row .lab{ display:flex; justify-content:space-between; align-items:baseline; font-size:12.5px; color:var(--muted); margin-bottom:9px; }
-  .cc-row .lab b{ font-family:"Fraunces",serif; color:var(--ink); font-size:15px; font-weight:600; }
-  input[type=range]{ width:100%; -webkit-appearance:none; height:4px; border-radius:4px; background:var(--line); outline:none; }
-  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:20px; height:20px; border-radius:50%; background:var(--accent); cursor:pointer; box-shadow:0 0 0 4px rgba(184,71,46,.14); }
-  .cc-out{ margin-top:22px; padding-top:22px; border-top:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:14px; }
-  .cc-out .k{ font-size:12px; color:var(--muted); }
-  .cc-out .big{ font-family:"Fraunces",serif; font-size:34px; font-weight:600; color:var(--accent); line-height:1; letter-spacing:-.02em; }
-  .cc-out .big small{ font-size:15px; color:var(--muted); font-family:"Inter"; }
-  .cc-out .go{ padding:10px 16px; font-size:13px; }
-
-  /* STRIP */
-  .strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg2); }
-  .strip .wrap{ display:flex; gap:38px; flex-wrap:wrap; justify-content:space-between; padding:22px 28px; }
-  .strip .it{ font-size:13.5px; color:var(--soft); display:flex; align-items:center; gap:10px; }
-  .strip .it b{ font-family:"Fraunces",serif; color:var(--accent); font-weight:600; }
+  /* HERO — exaggerated minimalism: oversized type, whitespace */
+  header{ position:relative; padding:170px 0 70px; overflow:hidden; }
+  .hero-orb{ position:absolute; z-index:0; border-radius:50%; filter:blur(10px); opacity:.5; }
+  .hero-orb.a{ width:520px; height:520px; right:-120px; top:40px;
+    background:radial-gradient(circle at 30% 30%, rgba(20,184,166,.28), transparent 62%); }
+  .hero-orb.b{ width:440px; height:440px; left:-140px; bottom:-80px;
+    background:radial-gradient(circle at 50% 50%, rgba(3,105,161,.16), transparent 60%); }
+  .hero-inner{ position:relative; z-index:2; }
+  .hero-eye{ display:flex; align-items:center; gap:14px; }
+  .hero-eye .line{ height:1px; width:54px; background:var(--primary); opacity:.5; }
+  h1.hero{ font-size:clamp(44px,8.5vw,104px); line-height:0.96; font-weight:700; letter-spacing:-0.03em; margin-top:26px; max-width:14ch; }
+  h1.hero .thin{ font-weight:400; color:var(--primary); font-style:italic; font-family:"Josefin Sans"; }
+  .hero-row{ display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end; margin-top:38px; padding-bottom:40px; border-bottom:1px solid var(--border); }
+  @media(max-width:820px){ .hero-row{ grid-template-columns:1fr; gap:26px; align-items:start; } }
+  .hero-sub{ font-size:clamp(16px,2.1vw,19px); line-height:1.6; color:var(--muted-fg); max-width:50ch; font-weight:400; }
+  .hero-cta{ display:flex; gap:13px; flex-wrap:wrap; }
+  .kpis{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:38px; }
+  .kpis .k{ padding:0 26px; border-left:1px solid var(--border); }
+  .kpis .k:first-child{ padding-left:0; border-left:0; }
+  .kpis .k .n{ font-family:"Cinzel",serif; font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--primary); line-height:1; letter-spacing:-.02em; }
+  .kpis .k .l{ font-size:13px; color:var(--muted-fg); margin-top:10px; font-weight:400; }
 
   /* SECTION */
-  section.blk{ padding:92px 0; position:relative; }
-  .sec-top{ display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:40px; flex-wrap:wrap; }
-  .sec-top h2{ font-size:clamp(30px,4.4vw,48px); line-height:1.05; font-weight:600; max-width:18ch; }
-  .sec-top p{ color:var(--muted); font-size:15px; max-width:36ch; line-height:1.6; }
+  section.blk{ padding:100px 0; position:relative; }
+  .sec-head{ margin-bottom:48px; }
+  .sec-idx{ font-family:"Cinzel",serif; font-size:14px; color:var(--primary); letter-spacing:.06em; }
+  .sec-head h2{ font-size:clamp(32px,5.5vw,60px); line-height:1.02; font-weight:700; letter-spacing:-.02em; margin-top:12px; max-width:20ch; }
+  .sec-head p{ color:var(--muted-fg); font-size:16px; max-width:52ch; line-height:1.6; margin-top:18px; }
 
-  /* FILTER */
-  .filter{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px; }
-  .fbtn{ padding:9px 18px; border-radius:100px; border:1px solid var(--line); background:var(--panel);
-    font-size:13.5px; color:var(--soft); cursor:pointer; transition:all .2s; user-select:none; }
-  .fbtn:hover{ border-color:var(--accent); } .fbtn.on{ background:var(--accent); border-color:var(--accent); color:#fff; }
+  /* CALCULATOR — flagship interactive */
+  .calc-sec{ background:var(--fg); color:#EAF6F3; }
+  .calc-sec .sec-idx{ color:var(--secondary); }
+  .calc-sec .sec-head h2{ color:#fff; }
+  .calc-sec .sec-head p{ color:#A9C9C3; }
+  .calc{ display:grid; grid-template-columns:1.1fr 1fr; gap:0; border:1px solid rgba(153,246,228,.16); border-radius:24px; overflow:hidden;
+    background:rgba(255,255,255,.03); }
+  @media(max-width:840px){ .calc{ grid-template-columns:1fr; } }
+  .calc .in{ padding:46px 44px; border-right:1px solid rgba(153,246,228,.16); }
+  @media(max-width:840px){ .calc .in{ border-right:0; border-bottom:1px solid rgba(153,246,228,.16); } }
+  .calc h3{ font-size:22px; color:#fff; font-weight:600; margin-bottom:6px; }
+  .calc .hint{ font-size:14px; color:#9DC0BA; margin-bottom:28px; line-height:1.55; }
+  .calc label{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#8FB3AD; display:block; margin-bottom:12px; }
+  .progs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:26px; }
+  .progs button{ padding:10px 16px; border-radius:100px; border:1px solid rgba(153,246,228,.22); background:transparent; color:#CDE9E4;
+    font-family:inherit; font-size:13.5px; font-weight:500; cursor:pointer; transition:all .2s; }
+  .progs button:hover{ border-color:var(--secondary); color:#fff; }
+  .progs button.on{ background:var(--secondary); border-color:var(--secondary); color:#06302B; font-weight:600; }
+  .crow{ margin-bottom:20px; }
+  .crow .lab{ display:flex; justify-content:space-between; align-items:baseline; font-size:13px; color:#9DC0BA; margin-bottom:10px; }
+  .crow .lab b{ font-family:"Cinzel",serif; color:#fff; font-size:16px; font-weight:600; }
+  input[type=range]{ width:100%; -webkit-appearance:none; height:4px; border-radius:4px; background:rgba(153,246,228,.2); outline:none; }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:22px; height:22px; border-radius:50%; background:var(--secondary); cursor:pointer; box-shadow:0 0 0 5px rgba(20,184,166,.18); }
+  input[type=range]:focus-visible{ outline:2px solid var(--secondary); outline-offset:6px; }
+  .calc .out{ padding:46px 44px; display:flex; flex-direction:column; justify-content:center;
+    background:linear-gradient(155deg, rgba(20,184,166,.10), rgba(3,105,161,.06)); }
+  .calc .out .lbl{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8FB3AD; }
+  .calc .out .big{ font-family:"Cinzel",serif; font-size:clamp(44px,6.5vw,66px); font-weight:700; color:#fff; line-height:1; letter-spacing:-.02em; margin:10px 0 6px; }
+  .calc .out .big small{ font-size:17px; color:#9DC0BA; font-family:"Josefin Sans"; }
+  .calc .out .sub{ font-size:14px; color:#BFDDD8; }
+  .calc .out .split{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; padding-top:28px; border-top:1px solid rgba(153,246,228,.16); }
+  .calc .out .split .k{ font-size:12px; color:#8FB3AD; } .calc .out .split .v{ font-family:"Cinzel",serif; font-size:24px; font-weight:600; color:#fff; margin-top:6px; }
+  .calc .out .note{ font-size:12px; color:#7FA39D; margin-top:24px; line-height:1.5; }
+  .calc .out .go{ margin-top:22px; }
 
-  /* CATALOG — 2 columns, larger, with monthly payment */
-  .catalog{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
-  @media(max-width:760px){ .catalog{grid-template-columns:1fr;} }
-  .obj{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--panel);
-    transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s, border-color .5s; cursor:pointer; display:flex; flex-direction:column; }
-  .obj:hover{ transform:translateY(-6px); box-shadow:0 30px 60px -34px rgba(80,50,30,.4); border-color:#dccbb8; }
-  .obj .img{ aspect-ratio:16/10; position:relative; overflow:hidden; }
-  .obj .img .art{ position:absolute; inset:0; transition:transform .8s cubic-bezier(.16,1,.3,1); }
-  .obj:hover .img .art{ transform:scale(1.05); }
-  .obj.c1 .art{ background:linear-gradient(150deg,#e7d3c4,#c98b6a),radial-gradient(60% 60% at 30% 20%, rgba(255,240,225,.6), transparent 55%); }
-  .obj.c2 .art{ background:linear-gradient(150deg,#d7ddc7,#8fa06a),radial-gradient(60% 60% at 70% 25%, rgba(240,245,220,.55), transparent 55%); }
-  .obj.c3 .art{ background:linear-gradient(150deg,#e4d6cf,#b58a7a),radial-gradient(60% 60% at 40% 30%, rgba(250,238,230,.55), transparent 55%); }
-  .obj.c4 .art{ background:linear-gradient(150deg,#dcd7cb,#a89a7a),radial-gradient(60% 60% at 60% 20%, rgba(248,242,228,.5), transparent 55%); }
-  .obj .mortgage{ position:absolute; bottom:12px; left:12px; background:rgba(33,27,23,.82); color:#fff; padding:7px 13px; border-radius:100px;
-    font-size:12.5px; backdrop-filter:blur(4px); } .obj .mortgage b{ color:#fff; font-weight:600; }
-  .obj .tag{ position:absolute; top:12px; left:12px; font-size:11px; letter-spacing:.06em; text-transform:uppercase; font-weight:600;
-    padding:6px 12px; border-radius:100px; background:rgba(255,253,250,.92); color:var(--accent); backdrop-filter:blur(4px); }
-  .obj .ipoteka{ position:absolute; top:12px; right:12px; font-size:11px; font-weight:600; padding:6px 12px; border-radius:100px;
-    background:rgba(110,122,79,.92); color:#fff; backdrop-filter:blur(4px); }
-  .obj .body{ padding:20px 22px 22px; flex:1; display:flex; flex-direction:column; }
-  .obj .price{ font-family:"Fraunces",serif; font-size:24px; font-weight:600; }
-  .obj h3{ font-size:17px; margin-top:8px; font-weight:600; font-family:"Inter"; letter-spacing:0; }
-  .obj .addr{ font-size:13px; color:var(--muted); margin-top:5px; }
-  .obj .specs{ display:flex; gap:16px; margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
-  .obj .specs .s{ font-size:12.5px; color:var(--soft); } .obj .specs .s b{ color:var(--ink); font-weight:600; }
+  /* CASES — real deals, editorial */
+  .cases{ display:grid; gap:26px; }
+  .case{ display:grid; grid-template-columns:0.9fr 1.1fr; background:var(--paper); border:1px solid var(--border); border-radius:24px; overflow:hidden;
+    transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s; }
+  .case:hover{ transform:translateY(-5px); box-shadow:0 40px 80px -44px rgba(15,118,110,.4); }
+  @media(max-width:820px){ .case{ grid-template-columns:1fr; } }
+  .case .ph{ position:relative; min-height:300px; background:var(--muted); }
+  .case .ph img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .case.rev{ direction:rtl; } .case.rev > *{ direction:ltr; }
+  .case .txt{ padding:44px 42px; display:flex; flex-direction:column; justify-content:center; }
+  .case .badge{ display:inline-flex; align-items:center; gap:8px; align-self:flex-start; font-size:12px; letter-spacing:.04em;
+    color:var(--primary); background:var(--muted); border:1px solid var(--border); padding:7px 14px; border-radius:100px; font-weight:600; }
+  .case .txt h3{ font-size:26px; font-weight:600; margin-top:18px; line-height:1.15; }
+  .case .loc{ font-size:14px; color:var(--muted-fg); margin-top:10px; display:flex; align-items:center; gap:8px; }
+  .case .price{ font-family:"Cinzel",serif; font-size:34px; font-weight:700; color:var(--fg); margin-top:22px; letter-spacing:-.01em; }
+  .case .feats{ margin-top:22px; display:grid; gap:11px; }
+  .case .feats .f{ display:flex; gap:11px; align-items:flex-start; font-size:14.5px; color:var(--fg); line-height:1.45; }
+  .case .feats .f svg{ flex:none; margin-top:2px; }
+  .case .mtg{ margin-top:24px; padding:16px 18px; border-radius:14px; background:var(--muted); display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .case .mtg .l{ font-size:13px; color:var(--muted-fg); } .case .mtg .l b{ color:var(--fg); font-weight:600; }
+  .case .mtg .pay{ font-family:"Cinzel",serif; font-size:22px; font-weight:700; color:var(--primary); }
 
-  /* PATH — numbered horizontal steps */
-  .path{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  /* PATH */
+  .path{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
   @media(max-width:860px){ .path{grid-template-columns:1fr 1fr;} }
   @media(max-width:520px){ .path{grid-template-columns:1fr;} }
-  .pstep{ border:1px solid var(--line); border-radius:var(--radius); padding:26px 22px; background:var(--panel); position:relative;
-    transition:border-color .4s, transform .4s; }
-  .pstep:hover{ border-color:var(--accent); transform:translateY(-4px); }
-  .pstep .n{ font-family:"Fraunces",serif; font-size:32px; color:var(--bg2); font-weight:700; line-height:1; }
-  .pstep:hover .n{ color:var(--accent); transition:color .4s; }
-  .pstep h3{ font-size:18px; margin-top:8px; font-weight:600; }
-  .pstep p{ font-size:13.5px; color:var(--muted); margin-top:10px; line-height:1.6; }
+  .pstep{ padding:30px 26px; border:1px solid var(--border); border-radius:var(--radius); background:var(--paper);
+    transition:border-color .4s, transform .4s, box-shadow .4s; }
+  .pstep:hover{ border-color:var(--primary); transform:translateY(-4px); box-shadow:0 24px 50px -34px rgba(15,118,110,.4); }
+  .pstep .ic{ width:46px; height:46px; border-radius:12px; background:var(--muted); display:grid; place-items:center; color:var(--primary); }
+  .pstep .n{ font-family:"Cinzel",serif; font-size:13px; color:var(--muted-fg); font-weight:600; margin-top:18px; }
+  .pstep h3{ font-size:19px; font-weight:600; margin-top:6px; }
+  .pstep p{ font-size:14px; color:var(--muted-fg); margin-top:10px; line-height:1.6; }
 
   /* ABOUT */
-  .about{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
-  @media(max-width:860px){ .about{grid-template-columns:1fr; gap:34px;} }
-  .about .txt h2{ font-size:clamp(28px,4vw,44px); line-height:1.08; font-weight:600; }
-  .about .txt p{ margin-top:20px; font-size:15.5px; line-height:1.7; color:var(--soft); max-width:46ch; }
-  .about .quotes{ margin-top:24px; display:grid; gap:14px; }
-  .about .q{ border-left:2px solid var(--accent); padding:6px 0 6px 18px; }
-  .about .q p{ margin:0; font-size:14.5px; color:var(--ink); line-height:1.55; font-style:italic; }
-  .about .q .who{ font-size:12.5px; color:var(--muted); margin-top:6px; font-style:normal; }
-  .about .facts{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .fact{ border:1px solid var(--line); border-radius:var(--radius); padding:26px 24px; background:var(--panel); }
-  .fact .n{ font-family:"Fraunces",serif; font-size:36px; font-weight:600; color:var(--accent); line-height:1; letter-spacing:-.02em; }
-  .fact .l{ font-size:13px; color:var(--muted); margin-top:12px; line-height:1.5; }
+  .about{ display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+  @media(max-width:860px){ .about{grid-template-columns:1fr; gap:36px;} }
+  .about h2{ font-size:clamp(30px,4.4vw,50px); line-height:1.06; font-weight:700; letter-spacing:-.02em; }
+  .about p{ margin-top:22px; font-size:16px; line-height:1.75; color:var(--fg); max-width:48ch; }
+  .about .quote{ margin-top:26px; border-left:3px solid var(--primary); padding:10px 0 10px 22px; }
+  .about .quote p{ margin:0; font-size:16px; color:var(--fg); font-style:italic; }
+  .about .quote .who{ font-size:13px; color:var(--muted-fg); margin-top:8px; }
+  .about .card{ background:var(--fg); color:#fff; border-radius:24px; padding:40px 38px; }
+  .about .card .row{ display:flex; align-items:baseline; justify-content:space-between; padding:18px 0; border-top:1px solid rgba(153,246,228,.16); }
+  .about .card .row:first-child{ border-top:0; padding-top:0; }
+  .about .card .row .n{ font-family:"Cinzel",serif; font-size:30px; font-weight:700; color:var(--secondary); letter-spacing:-.02em; }
+  .about .card .row .l{ font-size:14px; color:#BFDDD8; text-align:right; max-width:16ch; }
 
-  /* FAQ accordion — unique to this site */
-  .faq{ max-width:820px; margin:0 auto; }
-  .qa{ border-bottom:1px solid var(--line); }
-  .qa button{ width:100%; text-align:left; background:none; border:0; cursor:pointer; padding:22px 4px;
-    display:flex; justify-content:space-between; align-items:center; gap:20px; font-family:"Fraunces",serif; font-size:19px; color:var(--ink); font-weight:600; }
-  .qa button .ic{ flex:none; width:26px; height:26px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center; transition:transform .35s, background .35s, border-color .35s; }
-  .qa.open button .ic{ transform:rotate(45deg); background:var(--accent); border-color:var(--accent); color:#fff; }
+  /* FAQ */
+  .faq{ max-width:860px; margin:0 auto; }
+  .qa{ border-bottom:1px solid var(--border); }
+  .qa button{ width:100%; text-align:left; background:none; border:0; cursor:pointer; padding:24px 4px;
+    display:flex; justify-content:space-between; align-items:center; gap:20px; font-family:"Cinzel",serif; font-size:19px; color:var(--fg); font-weight:600; }
+  .qa button .ic{ flex:none; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:grid; place-items:center; transition:transform .35s, background .35s, border-color .35s, color .35s; color:var(--primary); }
+  .qa.open button .ic{ transform:rotate(45deg); background:var(--primary); border-color:var(--primary); color:#fff; }
   .qa .ans{ max-height:0; overflow:hidden; transition:max-height .4s cubic-bezier(.16,1,.3,1); }
-  .qa .ans p{ font-size:14.5px; color:var(--soft); line-height:1.65; padding:0 4px 24px; max-width:64ch; }
+  .qa .ans p{ font-size:15px; color:var(--muted-fg); line-height:1.7; padding:0 4px 26px; max-width:70ch; }
 
   /* ORDER */
-  .order{ border:1px solid var(--line); border-radius:24px; overflow:hidden; background:var(--panel); display:grid; grid-template-columns:1.05fr 1fr; }
+  .order{ border:1px solid var(--border); border-radius:26px; overflow:hidden; background:var(--paper); display:grid; grid-template-columns:1.05fr 1fr; }
   @media(max-width:860px){ .order{grid-template-columns:1fr;} }
-  .order .left{ padding:52px 46px; position:relative; background:linear-gradient(160deg,var(--panel),var(--bg2)); }
-  .order .left h2{ font-size:clamp(28px,3.8vw,42px); line-height:1.06; font-weight:600; }
-  .order .left p{ color:var(--soft); font-size:15.5px; line-height:1.65; margin-top:20px; max-width:40ch; }
+  .order .left{ padding:54px 46px; background:linear-gradient(160deg,var(--paper),var(--muted)); }
+  .order .left h2{ font-size:clamp(28px,3.8vw,42px); line-height:1.06; font-weight:700; letter-spacing:-.01em; }
+  .order .left p{ color:var(--muted-fg); font-size:16px; line-height:1.65; margin-top:20px; max-width:40ch; }
   .order .steps{ margin-top:28px; }
   .order .steps .s{ display:flex; gap:14px; align-items:baseline; padding:10px 0; }
-  .order .steps .s b{ font-family:"Fraunces",serif; color:var(--accent); font-size:15px; }
-  .order .steps .s span{ color:var(--soft); font-size:14.5px; }
-  .order .form{ padding:44px 42px; }
-  .field{ margin-bottom:17px; }
-  .field label{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:9px; }
-  .field input, .field select{ width:100%; padding:13px 15px; border-radius:12px; background:var(--bg); border:1px solid var(--line);
-    color:var(--ink); font-family:inherit; font-size:14.5px; transition:border-color .25s, box-shadow .25s; }
-  .field input:focus, .field select:focus{ outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(184,71,46,.14); }
-  .submit{ width:100%; justify-content:center; margin-top:6px; padding:15px; font-size:15px; }
-  .form-note{ font-size:12px; color:var(--muted); margin-top:13px; text-align:center; }
-  .sent{ text-align:center; padding:26px 0; }
-  .sent .ok{ width:56px; height:56px; border-radius:50%; background:var(--accent); display:grid; place-items:center; margin:0 auto 16px; }
-  .sent h3{ font-size:23px; font-weight:600; } .sent p{ color:var(--muted); font-size:14px; margin:8px auto 0; max-width:38ch; }
+  .order .steps .s b{ font-family:"Cinzel",serif; color:var(--primary); font-size:15px; }
+  .order .steps .s span{ color:var(--fg); font-size:15px; }
+  .order .form{ padding:46px 42px; }
+  .field{ margin-bottom:18px; }
+  .field label{ font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted-fg); display:block; margin-bottom:9px; font-weight:600; }
+  .field input, .field select{ width:100%; padding:14px 16px; border-radius:12px; background:var(--bg); border:1px solid var(--border);
+    color:var(--fg); font-family:inherit; font-size:15px; transition:border-color .25s, box-shadow .25s; }
+  .field input:focus, .field select:focus{ outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(15,118,110,.14); }
+  .submit{ width:100%; justify-content:center; margin-top:6px; padding:16px; font-size:15.5px; }
+  .form-note{ font-size:12.5px; color:var(--muted-fg); margin-top:14px; text-align:center; }
+  .sent{ text-align:center; padding:30px 0; }
+  .sent .ok{ width:60px; height:60px; border-radius:50%; background:var(--primary); display:grid; place-items:center; margin:0 auto 18px; }
+  .sent h3{ font-size:24px; font-weight:600; } .sent p{ color:var(--muted-fg); font-size:14.5px; margin:8px auto 0; max-width:38ch; }
 
   /* FOOTER */
-  footer{ border-top:1px solid var(--line); padding:64px 0 40px; background:var(--bg2); }
+  footer{ border-top:1px solid var(--border); padding:70px 0 44px; background:var(--paper); }
   .foot-inner{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; }
-  .foot-inner .big{ font-family:"Fraunces",serif; font-size:clamp(26px,4.6vw,46px); font-weight:600; letter-spacing:-0.02em; max-width:16ch; line-height:1.05; }
-  .foot-links{ display:flex; flex-direction:column; gap:12px; }
-  .foot-links a{ color:var(--soft); font-size:14.5px; transition:color .25s; } .foot-links a:hover{ color:var(--accent); }
-  .foot-bottom{ margin-top:48px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:12.5px; color:var(--muted); }
+  .foot-inner .big{ font-family:"Cinzel",serif; font-size:clamp(28px,4.8vw,52px); font-weight:700; letter-spacing:-0.02em; max-width:16ch; line-height:1.05; }
+  .foot-links{ display:flex; flex-direction:column; gap:13px; }
+  .foot-links a{ color:var(--muted-fg); font-size:15px; transition:color .25s; } .foot-links a:hover{ color:var(--primary); }
+  .foot-bottom{ margin-top:52px; padding-top:24px; border-top:1px solid var(--border); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--muted-fg); }
 
   .mock-tag{ position:fixed; z-index:60; bottom:16px; left:16px; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--muted); background:rgba(255,253,250,.9); border:1px solid var(--line); padding:8px 14px; border-radius:100px; backdrop-filter:blur(8px); }
+    color:var(--muted-fg); background:rgba(255,255,255,.92); border:1px solid var(--border); padding:8px 14px; border-radius:100px; backdrop-filter:blur(8px); }
 </style>
 </head>
 <body>
@@ -215,9 +223,10 @@
 <!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-inner">
-    <div class="logo"><span class="m">Ксения Говорова</span><span class="s">Недвижимость · Ипотека</span></div>
+    <div class="logo">КСЕНИЯ ГОВОРОВА <span class="s">Краснодар</span></div>
     <div class="nav-links">
-      <a href="#catalog">Объекты</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#cases">Объекты</a>
       <a href="#path">Как купить</a>
       <a href="#faq">Вопросы</a>
       <a href="#order" class="btn">Оставить заявку</a>
@@ -227,139 +236,168 @@
 
 <!-- HERO -->
 <header>
-  <div class="hero-glow"></div>
+  <div class="hero-orb a"></div>
+  <div class="hero-orb b"></div>
   <div class="wrap hero-inner">
-    <div>
-      <div class="eyeline reveal">Эксперт по недвижимости и ипотеке · Краснодар</div>
-      <h1 class="hero reveal" style="margin-top:20px;">Своя квартира —<br><em>ближе</em>, чем кажется.</h1>
-      <p class="hero-sub reveal">Подберу квартиру и одобрю ипотеку на лучших условиях — провожу от заявки до ключей. Знаю программы господдержки и банки, которые реально одобряют. Прикиньте платёж прямо сейчас →</p>
-      <div class="hero-tags reveal">
-        <div class="t"><b>Господдержка</b> от 8%</div>
-        <div class="t"><b>Семейная</b> от 6%</div>
-        <div class="t">Одобрение <b>за 1 день</b></div>
+    <div class="hero-eye reveal"><span class="line"></span><span class="eyeline">Недвижимость и ипотека · Краснодар</span></div>
+    <h1 class="hero reveal">Своя квартира — <span class="thin">это ближе,</span> чем кажется</h1>
+
+    <div class="hero-row">
+      <p class="hero-sub reveal">Ксения Говорова — эксперт по недвижимости и ипотечный брокер. Подберу квартиру и одобрю ипотеку по программам господдержки — веду от заявки до ключей. Посчитайте свой платёж прямо сейчас.</p>
+      <div class="hero-cta reveal">
+        <a href="#calc" class="btn">Посчитать платёж <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#cases" class="btn ghost">Смотреть объекты</a>
       </div>
     </div>
 
-    <div class="reveal">
-      <div class="calc-card">
-        <div class="badge">Калькулятор ипотеки</div>
-        <h3>Ваш платёж по ипотеке</h3>
-        <div class="cc-hint">Выберите программу и подвиньте ползунки — покажу платёж в месяц.</div>
-
-        <div class="cc-progs" id="ccProgs">
-          <button data-rate="6"  class="on">Семейная <span class="r">6%</span></button>
-          <button data-rate="8">Господдержка <span class="r">8%</span></button>
-          <button data-rate="18">Базовая <span class="r">18%</span></button>
-        </div>
-
-        <div class="cc-row">
-          <div class="lab"><span>Стоимость квартиры</span><b id="ccPrice">6 500 000 ₽</b></div>
-          <input type="range" id="ccP" min="2000000" max="20000000" step="100000" value="6500000">
-        </div>
-        <div class="cc-row">
-          <div class="lab"><span>Первоначальный взнос</span><b id="ccDp">20% · 1 300 000 ₽</b></div>
-          <input type="range" id="ccD" min="10" max="60" step="5" value="20">
-        </div>
-        <div class="cc-row">
-          <div class="lab"><span>Срок</span><b id="ccT">20 лет</b></div>
-          <input type="range" id="ccY" min="5" max="30" step="1" value="20">
-        </div>
-
-        <div class="cc-out">
-          <div><div class="k">Платёж в месяц</div><div class="big tab" id="ccPay">37 200 <small>₽/мес</small></div></div>
-          <a href="#order" class="btn go" onclick="prefillCalc()">Подобрать под платёж</a>
-        </div>
-      </div>
+    <div class="kpis reveal">
+      <div class="k"><div class="n tab">6%</div><div class="l">семейная ипотека — помогаю оформить</div></div>
+      <div class="k"><div class="n tab">1 день</div><div class="l">среднее время одобрения заявки</div></div>
+      <div class="k"><div class="n tab">12+</div><div class="l">банков-партнёров для одобрения</div></div>
     </div>
   </div>
 </header>
 
-<!-- STRIP -->
-<div class="strip">
+<!-- CALCULATOR -->
+<section class="blk calc-sec" id="calc">
   <div class="wrap">
-    <div class="it"><b>01</b> Подбор квартиры под ваш бюджет</div>
-    <div class="it"><b>02</b> Одобрение ипотеки в нескольких банках</div>
-    <div class="it"><b>03</b> Проверка и сделка</div>
-    <div class="it"><b>04</b> Ключи и налоговый вычет</div>
+    <div class="sec-head reveal">
+      <div class="sec-idx">01 — Расчёт</div>
+      <h2>Калькулятор ипотеки</h2>
+      <p>Главный вопрос перед покупкой — «а потяну ли платёж». Выберите программу и параметры — покажу платёж в месяц.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="in">
+        <h3>Ваши параметры</h3>
+        <p class="hint">Ставки — по актуальным программам господдержки. Точный расчёт по вашей ситуации сделаю лично.</p>
+
+        <label>Программа</label>
+        <div class="progs" id="progs">
+          <button data-rate="6"  class="on">Семейная · 6%</button>
+          <button data-rate="8">Господдержка · 8%</button>
+          <button data-rate="18">Базовая · 18%</button>
+        </div>
+
+        <div class="crow">
+          <div class="lab"><span>Стоимость квартиры</span><b id="cPrice">8 000 000 ₽</b></div>
+          <input type="range" id="cP" min="2500000" max="25000000" step="100000" value="8000000" aria-label="Стоимость квартиры">
+        </div>
+        <div class="crow">
+          <div class="lab"><span>Первоначальный взнос</span><b id="cDp">25% · 2 000 000 ₽</b></div>
+          <input type="range" id="cD" min="15" max="60" step="5" value="25" aria-label="Первоначальный взнос">
+        </div>
+        <div class="crow">
+          <div class="lab"><span>Срок кредита</span><b id="cT">20 лет</b></div>
+          <input type="range" id="cY" min="5" max="30" step="1" value="20" aria-label="Срок кредита">
+        </div>
+      </div>
+
+      <div class="out">
+        <div class="lbl">Платёж в месяц</div>
+        <div class="big tab" id="cPay">42 400 <small>₽/мес</small></div>
+        <div class="sub">по программе «<span id="cProg">Семейная</span>» · ставка <b id="cRate">6%</b></div>
+        <div class="split">
+          <div><div class="k">Сумма кредита</div><div class="v tab" id="cLoan">6 000 000 ₽</div></div>
+          <div><div class="k">Переплата за срок</div><div class="v tab" id="cOver">4.2 млн ₽</div></div>
+        </div>
+        <div class="note">Расчёт ориентировочный. Реальные условия зависят от банка, дохода и программы — разберём на консультации.</div>
+        <a href="#order" class="btn blue go" onclick="prefillCalc()">Подобрать под этот платёж</a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- CATALOG -->
-<section class="blk" id="catalog">
+<!-- CASES -->
+<section class="blk" id="cases">
   <div class="wrap">
-    <div class="sec-top reveal">
-      <h2>Квартиры<br>в подборке</h2>
-      <p>С платежом по ипотеке сразу на карточке — видно, что реально по карману. Все проверены лично.</p>
+    <div class="sec-head reveal">
+      <div class="sec-idx">02 — Объекты</div>
+      <h2>Квартиры в подборке</h2>
+      <p>Реальные объекты из моей работы. С расчётом ипотеки — сразу видно, что по карману.</p>
     </div>
 
-    <div class="filter reveal" id="filter">
-      <span class="fbtn on">Все</span>
-      <span class="fbtn">Новостройки</span>
-      <span class="fbtn">Вторичка</span>
-      <span class="fbtn">Семейная ипотека</span>
-      <span class="fbtn">Для инвестиций</span>
-    </div>
+    <div class="cases">
 
-    <div class="catalog">
-      <a class="obj c1 reveal" href="#order" onclick="pick('2-комн. в ЖК «Абрикосово»','6 500 000 ₽')">
-        <div class="img"><div class="art"></div><span class="tag">Новостройка</span><span class="ipoteka">Семейная 6%</span>
-          <div class="mortgage">от <b>27 400 ₽/мес</b> в ипотеку</div></div>
-        <div class="body">
-          <div class="price">6 500 000 ₽</div>
-          <h3>Светлая двушка в ЖК «Абрикосово»</h3>
-          <div class="addr">↳ Краснодар, ФМР · сдан, с отделкой</div>
-          <div class="specs"><div class="s"><b>2</b> комн.</div><div class="s"><b>58</b> м²</div><div class="s"><b>7/16</b> этаж</div></div>
+      <article class="case reveal">
+        <div class="ph"><img src="case-master.png" alt="2-комнатная квартира с мастер-спальней в Краснодаре, сдача 2028"></div>
+        <div class="txt">
+          <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="#0F766E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Новостройка · мастер-спальня</span>
+          <h3>2-комнатная с мастер-спальней</h3>
+          <div class="loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#5B7B76" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#5B7B76" stroke-width="1.6"/></svg> Краснодар · 57 м² · сдача 3 кв. 2028</div>
+          <div class="price tab">8 022 408 ₽</div>
+          <div class="feats">
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Мастер-спальня: свой санузел и гардеробная у родителей</div>
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Удобные утренние сборы и функциональное зонирование</div>
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Востребованный формат — и для жизни, и для перепродажи</div>
+          </div>
+          <div class="mtg">
+            <div class="l">Семейная ипотека <b>6%</b> · ПВ 2 023 251 ₽</div>
+            <div class="pay tab">35 968 ₽/мес</div>
+          </div>
         </div>
-      </a>
+      </article>
 
-      <a class="obj c2 reveal" href="#order" onclick="pick('Студия у парка','3 900 000 ₽')">
-        <div class="img"><div class="art"></div><span class="tag">Новостройка</span><span class="ipoteka">Господдержка 8%</span>
-          <div class="mortgage">от <b>21 300 ₽/мес</b> в ипотеку</div></div>
-        <div class="body">
-          <div class="price">3 900 000 ₽</div>
-          <h3>Студия у Чистяковской рощи</h3>
-          <div class="addr">↳ Краснодар · под аренду или для старта</div>
-          <div class="specs"><div class="s"><b>1</b> комн.</div><div class="s"><b>27</b> м²</div><div class="s"><b>4/12</b> этаж</div></div>
+      <article class="case rev reveal">
+        <div class="ph">
+          <img src="" alt="" style="display:none">
+          <div style="position:absolute;inset:0;background:linear-gradient(155deg,#0F766E,#0369A1);display:grid;place-items:center;">
+            <div style="text-align:center;color:#EAF6F3;padding:20px;">
+              <div style="font-family:Cinzel,serif;font-size:60px;font-weight:700;line-height:1;">23</div>
+              <div style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-top:10px;opacity:.85;">этаж · панорама города</div>
+            </div>
+          </div>
         </div>
-      </a>
+        <div class="txt">
+          <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="#0F766E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Готова к заселению · с ремонтом</span>
+          <h3>Евро-3 в ЖК «Лучший», 83 м²</h3>
+          <div class="loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#5B7B76" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#5B7B76" stroke-width="1.6"/></svg> Краснодар · ул. Петра Метальникова, 38 · 23 этаж</div>
+          <div class="price tab">10 600 000 ₽</div>
+          <div class="feats">
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Дорогой современный ремонт из качественных материалов</div>
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Полностью укомплектована мебелью и техникой</div>
+            <div class="f"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Заезжайте и живите с первого дня — без вложений</div>
+          </div>
+          <div class="mtg">
+            <div class="l">Семейная ипотека <b>6%</b> · ПВ 20%</div>
+            <div class="pay tab">от 51 000 ₽/мес</div>
+          </div>
+        </div>
+      </article>
 
-      <a class="obj c3 reveal" href="#order" onclick="pick('3-комн. для семьи','8 900 000 ₽')">
-        <div class="img"><div class="art"></div><span class="tag">Вторичка</span><span class="ipoteka">Семейная 6%</span>
-          <div class="mortgage">от <b>42 700 ₽/мес</b> в ипотеку</div></div>
-        <div class="body">
-          <div class="price">8 900 000 ₽</div>
-          <h3>Трёшка для семьи с ремонтом</h3>
-          <div class="addr">↳ Краснодар, ЮМР · школа и сад рядом</div>
-          <div class="specs"><div class="s"><b>3</b> комн.</div><div class="s"><b>82</b> м²</div><div class="s"><b>5/9</b> этаж</div></div>
-        </div>
-      </a>
-
-      <a class="obj c4 reveal" href="#order" onclick="pick('Евродвушка у моря','5 400 000 ₽')">
-        <div class="img"><div class="art"></div><span class="tag">Новостройка</span><span class="ipoteka">Инвестиция</span>
-          <div class="mortgage">от <b>26 000 ₽/мес</b> в ипотеку</div></div>
-        <div class="body">
-          <div class="price">5 400 000 ₽</div>
-          <h3>Евродвушка в 20 мин от моря</h3>
-          <div class="addr">↳ пригород · растёт в цене к сдаче</div>
-          <div class="specs"><div class="s"><b>2</b> евро</div><div class="s"><b>42</b> м²</div><div class="s"><b>9/18</b> этаж</div></div>
-        </div>
-      </a>
     </div>
   </div>
 </section>
 
 <!-- PATH -->
-<section class="blk" id="path" style="background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<section class="blk" id="path" style="background:var(--muted);">
   <div class="wrap">
-    <div class="sec-top reveal">
-      <h2>Путь к своей<br>квартире</h2>
-      <p>Ипотека пугает бумагами и отказами. Со мной вы проходите этот путь спокойно — я иду рядом на каждом шаге.</p>
+    <div class="sec-head reveal">
+      <div class="sec-idx">03 — Путь</div>
+      <h2>От заявки до ключей — со мной</h2>
+      <p>Ипотека пугает бумагами и отказами. Я иду рядом на каждом шаге и беру рутину на себя.</p>
     </div>
     <div class="path">
-      <div class="pstep reveal"><div class="n">01</div><h3>Разбор ситуации</h3><p>Смотрим доход, бюджет и цель. Честно говорю, на какую сумму реально одобрят — до подачи заявки.</p></div>
-      <div class="pstep reveal"><div class="n">02</div><h3>Одобрение ипотеки</h3><p>Подаю в несколько банков сразу и выбираю лучшую ставку. Знаю, кто одобряет, а кто откажет зря.</p></div>
-      <div class="pstep reveal"><div class="n">03</div><h3>Подбор и проверка</h3><p>Ищем квартиру под одобренную сумму, проверяю юридическую чистоту и торгуюсь за вашу цену.</p></div>
-      <div class="pstep reveal"><div class="n">04</div><h3>Сделка и ключи</h3><p>Провожу сделку, помогаю оформить и получить налоговый вычет. Вы въезжаете, я рядом до конца.</p></div>
+      <div class="pstep reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="n">Шаг 01</div><h3>Разбор ситуации</h3>
+        <p>Смотрим доход и цель. Честно говорю, какую сумму реально одобрят — ещё до подачи заявки.</p>
+      </div>
+      <div class="pstep reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h4M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="n">Шаг 02</div><h3>Одобрение ипотеки</h3>
+        <p>Подаю в несколько банков сразу и выбираю лучшую ставку. Знаю, кто одобрит, а кто откажет зря.</p>
+      </div>
+      <div class="pstep reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#0F766E" stroke-width="1.8"/><path d="M21 21l-4-4" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="n">Шаг 03</div><h3>Подбор и проверка</h3>
+        <p>Ищем квартиру под одобренную сумму, проверяю чистоту документов и торгуюсь за вашу цену.</p>
+      </div>
+      <div class="pstep reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 7a2 2 0 012 2v10l-5-3-5 3V9a2 2 0 012-2M9 7V5a3 3 0 016 0v2" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="n">Шаг 04</div><h3>Сделка и ключи</h3>
+        <p>Провожу сделку, помогаю с оформлением и налоговым вычетом. Вы въезжаете, я рядом до конца.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -367,78 +405,79 @@
 <!-- ABOUT -->
 <section class="blk" id="about">
   <div class="wrap about">
-    <div class="txt reveal">
+    <div class="reveal">
       <div class="eyeline">Почему со мной спокойно</div>
-      <h2 style="margin-top:16px;">Риелтор и ипотечный брокер в одном человеке.</h2>
-      <p>Обычно квартиру ищет один, а ипотеку выбиваешь сам в банке. Я закрываю оба вопроса — вам не нужно бегать между риелтором и кредитным менеджером. Один человек ведёт вас от «хочу свою квартиру» до ключей.</p>
-      <div class="quotes">
-        <div class="q"><p>«Нам отказали в двух банках сами. Ксения подала в нужный — одобрили за день, ставка ниже, чем мы ждали.»</p><div class="who">— Семья Ковалёвых, Краснодар</div></div>
-        <div class="q"><p>«Помогла и с ипотекой, и с квартирой, и с вычетом. Реально всё под ключ, я только подписывала.»</p><div class="who">— Марина, первая квартира</div></div>
+      <h2 style="margin-top:14px;">Риелтор и ипотечный брокер в одном человеке</h2>
+      <p>Обычно квартиру ищет один специалист, а ипотеку вы выбиваете в банке сами. Я закрываю оба вопроса — вам не нужно бегать между риелтором и кредитным менеджером. Веду вас от «хочу свою квартиру» до ключей.</p>
+      <div class="quote">
+        <p>«Нам отказали в двух банках. Ксения подала в нужный — одобрили за день, ставка ниже, чем мы ждали.»</p>
+        <div class="who">— семья Ковалёвых, Краснодар</div>
       </div>
     </div>
-    <div class="facts reveal">
-      <div class="fact"><div class="n">300+</div><div class="l">одобренных ипотек и сделок</div></div>
-      <div class="fact"><div class="n">12+</div><div class="l">банков-партнёров для одобрения</div></div>
-      <div class="fact"><div class="n">от 6%</div><div class="l">ставка по семейной ипотеке</div></div>
-      <div class="fact"><div class="n">1 день</div><div class="l">среднее время одобрения</div></div>
+    <div class="card reveal">
+      <div class="row"><div class="n tab">6%</div><div class="l">ставка по семейной ипотеке</div></div>
+      <div class="row"><div class="n tab">1 день</div><div class="l">среднее время одобрения</div></div>
+      <div class="row"><div class="n tab">12+</div><div class="l">банков-партнёров</div></div>
+      <div class="row"><div class="n tab">Под ключ</div><div class="l">подбор, ипотека, сделка, вычет</div></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="blk" id="faq">
+<section class="blk" id="faq" style="background:var(--muted);">
   <div class="wrap">
-    <div class="sec-top reveal" style="justify-content:center; text-align:center;">
-      <div style="margin:0 auto;"><h2 style="max-width:none;">Частые вопросы</h2></div>
+    <div class="sec-head reveal" style="text-align:center;">
+      <div class="sec-idx">04 — Вопросы</div>
+      <h2 style="margin:12px auto 0;">Частые вопросы</h2>
     </div>
     <div class="faq">
-      <div class="qa reveal"><button onclick="toggleQA(this)">Мне точно одобрят ипотеку?<span class="ic">+</span></button>
-        <div class="ans"><p>До подачи заявки я смотрю ваш доход и историю и честно говорю шансы. Подаю только туда, где реально одобрят, — чтобы не портить вам кредитную историю пустыми отказами.</p></div></div>
-      <div class="qa reveal"><button onclick="toggleQA(this)">Сколько стоят ваши услуги?<span class="ic">+</span></button>
-        <div class="ans"><p>Первичная консультация и расчёт — бесплатно. Стоимость сопровождения зависит от задачи, и я называю её сразу, до начала работы. Никаких скрытых процентов.</p></div></div>
-      <div class="qa reveal"><button onclick="toggleQA(this)">Что такое семейная ипотека под 6%?<span class="ic">+</span></button>
-        <div class="ans"><p>Это программа господдержки для семей с детьми — сниженная ставка от государства. Я проверю, подходите ли вы, и помогу оформить, если да.</p></div></div>
-      <div class="qa reveal"><button onclick="toggleQA(this)">Я не в Краснодаре — сможем работать?<span class="ic">+</span></button>
-        <div class="ans"><p>Да, часть шагов проходит онлайн — консультация, подбор и подача на одобрение. На сделку и просмотры подключаемся очно или через доверенных партнёров.</p></div></div>
+      <div class="qa reveal"><button onclick="toggleQA(this)">Мне точно одобрят ипотеку?<span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans"><p>До подачи я смотрю ваш доход и кредитную историю и честно называю шансы. Подаю только туда, где реально одобрят, — чтобы не портить историю пустыми отказами.</p></div></div>
+      <div class="qa reveal"><button onclick="toggleQA(this)">Что такое семейная ипотека под 6%?<span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans"><p>Это программа господдержки для семей с детьми — сниженная ставка от государства. Проверю, подходите ли вы, и помогу оформить документы.</p></div></div>
+      <div class="qa reveal"><button onclick="toggleQA(this)">Сколько стоят ваши услуги?<span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans"><p>Первичная консультация и расчёт — бесплатно. Стоимость сопровождения зависит от задачи и называется сразу, до начала работы. Без скрытых процентов.</p></div></div>
+      <div class="qa reveal"><button onclick="toggleQA(this)">Помогаете с продажей своей квартиры?<span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>
+        <div class="ans"><p>Да. Помогу выгодно продать текущую квартиру и сразу подобрать новую в ипотеку — сопровождаю обе сделки, чтобы вы не остались без жилья между ними.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- ORDER -->
-<section class="blk" id="order" style="background:var(--bg2); border-top:1px solid var(--line);">
+<section class="blk" id="order">
   <div class="wrap">
     <div class="order reveal">
       <div class="left">
-        <div class="eyeline">Заявка в один клик</div>
-        <h2 style="margin-top:16px;">Узнайте свой платёж<br>и что одобрят.</h2>
+        <div class="eyeline">Заявка</div>
+        <h2 style="margin-top:14px;">Узнайте свой платёж и что одобрят</h2>
         <p>Оставьте контакт — посчитаю ваш реальный платёж, прикину сумму одобрения и подберу пару вариантов. Бесплатно и без обязательств.</p>
         <div class="steps">
           <div class="s"><b>01</b><span>Оставляете короткую заявку</span></div>
-          <div class="s"><b>02</b><span>Я связываюсь и разбираю вашу ситуацию</span></div>
+          <div class="s"><b>02</b><span>Разбираю вашу ситуацию по доходу и цели</span></div>
           <div class="s"><b>03</b><span>Присылаю расчёт и подходящие квартиры</span></div>
         </div>
       </div>
       <div class="form">
         <form id="orderForm" onsubmit="return sendForm(event)">
           <div class="field">
-            <label>Что вам нужно</label>
+            <label for="fGoal">Что вам нужно</label>
             <select id="fGoal">
               <option>Купить квартиру в ипотеку</option>
               <option>Узнать, одобрят ли ипотеку</option>
-              <option>Подобрать квартиру</option>
+              <option>Продать и купить новую</option>
               <option>Просто посчитать платёж</option>
             </select>
           </div>
           <div class="field">
-            <label>Бюджет / стоимость квартиры</label>
-            <input type="text" id="fBudget" placeholder="Напр.: до 6 млн ₽">
+            <label for="fBudget">Бюджет / стоимость квартиры</label>
+            <input id="fBudget" type="text" placeholder="Напр.: до 8 млн ₽">
           </div>
           <div class="field">
-            <label>Как связаться</label>
-            <input type="text" placeholder="Telegram или телефон" required>
+            <label for="fContact">Как связаться</label>
+            <input id="fContact" type="text" placeholder="Telegram или телефон" required>
           </div>
           <button class="btn submit" type="submit">Получить расчёт <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="form-note">Отвечаю в течение 24 часов · консультация бесплатна</div>
+          <div class="form-note">Отвечаю в течение дня · консультация бесплатна</div>
         </form>
       </div>
     </div>
@@ -449,12 +488,12 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="big reveal">Готовы к своей квартире?<br>Давайте посчитаем.</div>
+      <div class="big reveal">Готовы к своей квартире? Давайте посчитаем.</div>
       <div class="foot-links reveal">
         <a href="#order">→ Оставить заявку</a>
-        <a href="https://www.instagram.com/govorova_realt/" target="_blank">→ Instagram</a>
-        <a href="#catalog">→ Квартиры в подборке</a>
-        <a href="#faq">→ Частые вопросы</a>
+        <a href="https://www.instagram.com/govorova_realt/" target="_blank" rel="noopener">→ Instagram</a>
+        <a href="#calc">→ Калькулятор ипотеки</a>
+        <a href="#cases">→ Объекты в подборке</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -472,56 +511,47 @@
   const io = new IntersectionObserver((es)=>{
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay = (Math.min(i,6)*50)+'ms'; io.observe(el); });
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay = (Math.min(i,6)*55)+'ms'; io.observe(el); });
 
-  const filter = document.getElementById('filter');
-  filter.addEventListener('click', e=>{
-    if(!e.target.classList.contains('fbtn')) return;
-    filter.querySelectorAll('.fbtn').forEach(c=>c.classList.remove('on')); e.target.classList.add('on');
-  });
-
-  // ---- mortgage calculator ----
-  let rate = 6;
-  const P = document.getElementById('ccP'), D = document.getElementById('ccD'), Y = document.getElementById('ccY');
+  // mortgage calculator
+  let rate = 6, prog = 'Семейная';
+  const P = document.getElementById('cP'), D = document.getElementById('cD'), Y = document.getElementById('cY');
   const rub = n => new Intl.NumberFormat('ru-RU').format(Math.round(n));
-  function ccCalc(){
-    const price = +P.value, dpPct = +D.value, years = +Y.value;
-    const dp = price * dpPct/100;
-    const loan = price - dp;
-    const r = rate/100/12, n = years*12;
-    const pay = r>0 ? loan * r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1) : loan/n;
-    document.getElementById('ccPrice').textContent = rub(price)+' ₽';
-    document.getElementById('ccDp').textContent = dpPct+'% · '+rub(dp)+' ₽';
-    document.getElementById('ccT').textContent = years+' '+(years%10===1&&years!==11?'год':(years%10>=2&&years%10<=4&&(years<12||years>14)?'года':'лет'));
-    document.getElementById('ccPay').innerHTML = rub(pay)+' <small>₽/мес</small>';
+  const yearWord = y => { const a=y%10,b=y%100; if(a===1&&b!==11)return'год'; if(a>=2&&a<=4&&(b<12||b>14))return'года'; return'лет'; };
+  function calc(){
+    const price=+P.value, dpPct=+D.value, years=+Y.value;
+    const dp=price*dpPct/100, loan=price-dp, r=rate/100/12, n=years*12;
+    const pay = r>0 ? loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1) : loan/n;
+    const overpay = pay*n - loan;
+    document.getElementById('cPrice').textContent = rub(price)+' ₽';
+    document.getElementById('cDp').textContent = dpPct+'% · '+rub(dp)+' ₽';
+    document.getElementById('cT').textContent = years+' '+yearWord(years);
+    document.getElementById('cPay').innerHTML = rub(pay)+' <small>₽/мес</small>';
+    document.getElementById('cLoan').textContent = rub(loan)+' ₽';
+    document.getElementById('cOver').textContent = (overpay/1e6).toFixed(1).replace('.',',')+' млн ₽';
+    document.getElementById('cRate').textContent = rate+'%';
+    document.getElementById('cProg').textContent = prog;
   }
-  document.querySelectorAll('#ccProgs button').forEach(b=> b.addEventListener('click', ()=>{
-    document.querySelectorAll('#ccProgs button').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on'); rate = +b.dataset.rate; ccCalc();
+  document.querySelectorAll('#progs button').forEach(b=> b.addEventListener('click', ()=>{
+    document.querySelectorAll('#progs button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); rate=+b.dataset.rate; prog=b.textContent.split('·')[0].trim(); calc();
   }));
-  [P,D,Y].forEach(el=> el.addEventListener('input', ccCalc));
-  ccCalc();
+  [P,D,Y].forEach(el=> el.addEventListener('input', calc));
+  calc();
 
   function prefillCalc(){
     document.getElementById('fGoal').selectedIndex = 0;
-    document.getElementById('fBudget').value = 'до ' + document.getElementById('ccPrice').textContent;
+    document.getElementById('fBudget').value = 'до ' + document.getElementById('cPrice').textContent;
   }
-
-  // FAQ
   function toggleQA(btn){
-    const qa = btn.parentElement, ans = qa.querySelector('.ans');
-    const open = qa.classList.toggle('open');
+    const qa=btn.parentElement, ans=qa.querySelector('.ans');
+    const open=qa.classList.toggle('open');
     ans.style.maxHeight = open ? ans.scrollHeight+'px' : 0;
-  }
-
-  function pick(name, price){
-    document.getElementById('fGoal').selectedIndex = 2;
-    document.getElementById('fBudget').value = price;
   }
   function sendForm(ev){
     ev.preventDefault();
     document.getElementById('orderForm').innerHTML =
-      '<div class="sent"><div class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Заявка отправлена</h3><p>В реальном сайте она сразу упадёт вам в Telegram. Это демо — так работает заявка с расчётом платежа.</p></div>';
+      '<div class="sent"><div class="ok"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Заявка отправлена</h3><p>В реальном сайте она сразу упадёт вам в Telegram. Это демо — так работает заявка с расчётом платежа.</p></div>';
     return false;
   }
 </script>
